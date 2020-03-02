@@ -1,8 +1,8 @@
 Planning a Wine Review App
 
 GET /register - should present a sign up form - users have an email
-  
- # potential for omniauth
+
+# potential for omniauth
 
 POST /users - creater the user in database - validation
 
@@ -44,3 +44,6 @@ POST /login - create their sessin and redirect
     Possibly scrape Vivino for data?
 
      Users are able to upload a photo of their wine bottle label.
+
+    * scope method: filter wines by grape variety and country of origin
+    *
