@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new'
   #root 'welcome#home'
   post '/register', to: 'users#create'
+
+  get '/wine', to: 'wines#index'
   #get '/login' => 'sessions#new'
   #post '/login' => 'sessions#create'
   #post '/logout' => 'sessions#destory'
