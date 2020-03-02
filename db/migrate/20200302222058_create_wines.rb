@@ -6,7 +6,6 @@ class CreateWines < ActiveRecord::Migration[6.0]
       t.string :grape_variety
       t.string :country_of_origin
       t.integer :rating
-
       t.timestamps
     end
   end
