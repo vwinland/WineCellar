@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   #root 'welcome#home'
   post '/register', to: 'users#create'
 
-  get '/wine', to: 'wines#index'
+  resources :wines, only: :index
+  #get '/wine', to: 'wines#index'
   #get '/login' => 'sessions#new'
   #post '/login' => 'sessions#create'
   #post '/logout' => 'sessions#destory'
