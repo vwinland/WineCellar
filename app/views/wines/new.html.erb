@@ -1,0 +1,7 @@
+<h2> Add a Wine Review </h2>
+
+<%= form_for Wine.new do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add Wine" %>
+<% end %>
