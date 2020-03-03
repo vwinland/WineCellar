@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/wines/new', to: 'wines#new'
 
   get '/reviews', to: "reviews#new"
+  post '/reviews', to: 'reviews#create'
   #get '/wine', to: 'wines#index'
   #get '/login' => 'sessions#new'
   #post '/login' => 'sessions#create'
