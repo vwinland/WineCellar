@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/register', to: 'users#create'
 
   get '/wines', to: "wines#index"
-  get '/wines/index/new', to: 'wines#new'
+  get '/wines/new', to: 'wines#new'
   #get '/wine', to: 'wines#index'
   #get '/login' => 'sessions#new'
   #post '/login' => 'sessions#create'
