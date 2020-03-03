@@ -30,6 +30,10 @@ POST /login - create their sessin and redirect
     GET /wines/:id
         - show details of a wine review
 
+
+        ## wines
+       * name, year, grape_variety, country_of_origin, img
+
     -- Notes --
 
             Wine Database
