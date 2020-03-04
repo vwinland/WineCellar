@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_03_03_015042) do
     t.integer "year"
     t.string "grape_variety"
     t.string "country_of_origin"
-    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
