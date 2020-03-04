@@ -1,7 +1,7 @@
 Rails.application.routes.draw do  
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :reviews do 
-    resources :wines, only: [:new]
+  resources :wines do 
+    resources :reviews
   end
   get '/register', to: 'users#new'
   #root 'welcome#home'

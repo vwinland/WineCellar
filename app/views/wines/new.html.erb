@@ -1,8 +1,15 @@
 <h2> Add a Wine Review </h2>
 
 <%= form_for Wine.new do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <li><%= f.label :name %>
+    <%= f.text_field :name %></li>
+    <li><%= f.label :year %>
+    <%= f.text_field :year %></li>
+    <li><%= f.label :grape_variety %>
+    <%= f.text_field :grape_variety %></li>
+    <li><%= f.label :country_of_origin %>
+    <%= f.text_field :country_of_origin %></li>
+    
     <%= f.submit "Add Wine" %>
 <% end %>
 
