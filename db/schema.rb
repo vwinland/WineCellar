@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2020_03_03_015042) do
     t.integer "wine_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+    t.index ["wine_id"], name: "index_reviews_on_wine_id"
   end
 
   create_table "users", force: :cascade do |t|
