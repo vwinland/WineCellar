@@ -8,4 +8,10 @@ class UsersController < ApplicationController
     def create
         raise "Hello".inspect
     end
+
+    private 
+
+    def user_registration_params
+        params.require(:user).permit(:name, :password)
+    end
 end
