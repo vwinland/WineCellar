@@ -43,7 +43,7 @@ POST /login - create their sessin and redirect
 
   * scope method: filter wines by grape variety and country of origin
     
-    ## wines
+    ### wines ###
 
     ### db
     * name, grape_variety, year, country_of_origin, img
@@ -51,7 +51,7 @@ POST /login - create their sessin and redirect
     ### controller
     * index
       * admins can CRUD wines -- build out of there's time
-      * 
+  
     ### model
 
     ### routes
@@ -59,3 +59,21 @@ POST /login - create their sessin and redirect
 
     ### views
     *index 
+
+    ### reviews ###
+
+    ### controller
+    * index 
+    * new
+    * create
+      * edit - come back to this 
+
+
+    ### routes
+    * post '/reviews' to: 'review#create'
+     **NESTED ROUTE** 
+    * get '/wines/:wine_id/reviews', to: 'reviews#index' 
+    * get '/wines/:wine_id/reviews/new', to: 'reviews#new' 
+  
+
+
