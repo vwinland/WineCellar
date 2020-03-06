@@ -10,11 +10,11 @@ class ReviewsController < ApplicationController
 
     def create 
         @review = Review.new(review_params)
-        @review.user_id = current_user.id 
-        @review.wine_id = @wine.id
+       # @review.user_id = current_user.id 
+        #@review.wine_id = @wine.id
 
         if @review.save
-            redirect_to @wine
+            redirect_to wines_path(@wines)
         else
             render 'new'
         end
