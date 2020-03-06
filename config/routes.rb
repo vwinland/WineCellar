@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   #root 'welcome#home'
   #post '/register', to: 'users#create'
 
-  resources :wines, only: :index
+  resources :wines, only: :index do 
+    resources :reviews, only: [:index, :new]
+  end
+
+  resources :reviews, only: :create
 
 end
