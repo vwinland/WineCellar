@@ -13,8 +13,7 @@ class ReviewsController < ApplicationController
        # @review.user_id = current_user.id 
         
 
-        if @review.wine_id = @wine
-            @review.save
+        if @review.save
             redirect_to wine_reviews_path(@wine)
         else
             render :new

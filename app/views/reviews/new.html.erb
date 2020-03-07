@@ -1,6 +1,6 @@
 <h2> Add a Review </h2>
 
-
+<%= render partial: '/errors', locals: { record: @reviews }
 
 <%= form_for @review do |f| %>
     <%= f.label :review %>
