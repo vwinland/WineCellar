@@ -1,1 +1,9 @@
 <h2> Reviews </h2>
+
+<%= link_to "wines", wines_path %>
+
+<% @reviews.each do |reviews| %>
+    <h3> link_to review.review, wines_reviews_path(@wines) %>
+    <p><% wines.reviews.count %></p>
+    #diplay grape variety
+<% end %>
