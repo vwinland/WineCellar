@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
     
     def index
-        @review = Wine.find_by(id: params[:wine_id])
+        @wine = Wine.find_by(id: params[:wine_id])
     end
 
     def new 
