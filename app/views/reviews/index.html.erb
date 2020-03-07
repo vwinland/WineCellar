@@ -1,2 +1,7 @@
-<h2> Reviews  of <i><%= @wine.name %></i></h2>
+<h2> Reviews of <i><%= @wine.name %></i></h2>
+
+<% @wine.reviews.each do |review| %>
+    <h3><%= review.wine.name %></h3>
+    <p><%= review.review %></p>
+<% end %>
 
