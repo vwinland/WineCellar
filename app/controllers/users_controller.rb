@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 # GET /register - new user action
     def new
-      # @user = User.new
+      @user = User.new
      # render :new
     end
 # Post /users - create the user action
