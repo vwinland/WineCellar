@@ -1,5 +1,7 @@
 <h2> Reviews of <i><%= @wine.name %></i></h2>
 
+<%= link_to "Add New Review", new_wine_reviews_paths(@wines) %> 
+
 <% @wine.reviews.each do |review| %>
     <h3><%= review.wine.name %></h3>
     <p><%= review.review %></p>
