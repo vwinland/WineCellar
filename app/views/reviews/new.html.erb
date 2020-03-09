@@ -5,7 +5,7 @@
 
 <%= form_for @review do |f| %>
     <%= f.label :review %>
-    <%= f.text_area :review %>
+    <div><%= f.text_area :review %></div>
     <%= f.hidden_field :wine_id, value: @wine.id %>
-    <%= f.submit "Add Review" %>
+    <div><%= f.submit "Add Review" %></div>
 <% end %>
