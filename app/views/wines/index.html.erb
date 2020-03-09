@@ -1,7 +1,8 @@
 <h2> Wines </h2>
 
 <% @wines.each do |wine| %>
-    <p><b>Name: <%= wine.name %></b></p>
+    <h3><%= link_to wine.name, wine_reviews_path(wine)%></h3>
+   
     <p>Year: <%= wine.year %></p>
     <p>Grape Variety: <%= wine.grape_variety %></p>
     <p>Country of Origin: <%= wine.country_of_origin %></p>

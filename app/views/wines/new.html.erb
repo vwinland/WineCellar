@@ -1,6 +1,6 @@
 <h2> Add a Wine Review </h2>
 
-<%= form_for Wine.new do |f| %>
+<%= form_for @wine do |f| %>
     <li><%= f.label :name %>
     <%= f.text_field :name %></li>
     <li><%= f.label :year %>

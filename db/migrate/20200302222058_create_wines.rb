@@ -5,6 +5,7 @@ class CreateWines < ActiveRecord::Migration[6.0]
       t.integer :year
       t.string :grape_variety
       t.string :country_of_origin
+      t.string :img
       t.timestamps
     end
   end

@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2020_03_03_015042) do
     t.integer "rating"
     t.text "review"
     t.integer "wine_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["wine_id"], name: "index_reviews_on_wine_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_015042) do
     t.integer "year"
     t.string "grape_variety"
     t.string "country_of_origin"
+    t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
