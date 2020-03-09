@@ -1,6 +1,7 @@
 
 <h2> Add a Review for <i><%= @wine.name %></i></h2>
 
+<%= render partial: '/errors', locals: { record: @review } %>
 
 <%= form_for @review do |f| %>
     <%= f.label :review %>
