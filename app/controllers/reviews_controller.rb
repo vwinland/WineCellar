@@ -11,18 +11,15 @@ class ReviewsController < ApplicationController
     end
 
     def create 
-    #     @review = Review.new(review_params)
-    #    @review.user_id = current_user.id 
-    #     @wine = Wine.new ######this made it work 
-
-    #     if @review.save 
-    #         redirect_to wine_reviews_path(@wine)
-    #     else
-    #         render :new
-    #     end
-    #     @wine = @review.wine
+       @review = Review.new(review_params)
+    
+        if @review.save 
+            redirect_to wine_reviews_path(@review.wine)
+        else
+            render :new
+        end
     end
-
+ 
     private 
 
     def get_wine
@@ -30,6 +27,6 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        params.require(:review).permit(:review)
+        params.require(:review).permit(:review, :wine_id)
     end
 end
