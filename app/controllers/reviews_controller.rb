@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
     
     def index
-        @wine = Wine.find_by(id: params[:wine_id])
+        get_wine
     end
 
     def new 
+        get_wine
         @review = Review.new
     end
 
@@ -21,6 +22,10 @@ class ReviewsController < ApplicationController
     end
 
     private 
+
+    def get_wine
+        @wine ||= Wine.find_by(id: params[:wine_id])
+    end
 
     def review_params
         params.require(:review).permit(:review)
