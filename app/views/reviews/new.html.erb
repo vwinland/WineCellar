@@ -1,9 +1,10 @@
-<h2> Add a Review </h2>
 
+<h2> Add a Review for <i><%= @wine.reviews.name %></i></h2>
 
 
 <%= form_for @review do |f| %>
     <%= f.label :review %>
     <%= f.text_area :review %>
+    <%= f.hidden_field :wine_id, value: @wine.id %>
     <%= f.submit "Add Review" %>
 <% end %>
