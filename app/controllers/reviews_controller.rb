@@ -12,8 +12,8 @@ class ReviewsController < ApplicationController
     end
 
     def create 
+       @wine = Wine.find_by(id: params[:review][:wine_id])
        @review = Review.new(review_params)
-    
         if @review.save 
             redirect_to wine_reviews_path(@review.wine)
         else
