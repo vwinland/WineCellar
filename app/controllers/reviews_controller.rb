@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
 
     def new 
         get_wine
+        redirect_to wines_path if !@wine
         @review = Review.new
         # @wine = Wine.new
     end
