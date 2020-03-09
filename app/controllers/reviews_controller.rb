@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     def new 
         get_wine
         @review = Review.new
-        #@wine = Wine.new
+        # @wine = Wine.new
     end
 
     def create 
@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     #    @review.user_id = current_user.id 
     #     @wine = Wine.new ######this made it work 
 
-    #     if @review.save
+    #     if @review.save 
     #         redirect_to wine_reviews_path(@wine)
     #     else
     #         render :new

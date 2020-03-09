@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #root 'welcome#home'
   #post '/register', to: 'users#create'
 
-  resources :wines, only: :index do 
+  resources :wines, only: [:index, :new, :create] do 
     resources :reviews, only: [:index, :new]
   end
 
