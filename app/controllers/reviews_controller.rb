@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
         get_wine
         redirect_to wines_path if !@wine
         @review = Review.new
-        # @wine = Wine.new
     end
 
     def create 
