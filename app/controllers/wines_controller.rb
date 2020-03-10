@@ -20,6 +20,22 @@ class WinesController < ApplicationController
         end
     end
 
+    def red 
+        @wines = Wine.red 
+        render :index
+    end
+
+    def white 
+        @wines = Wine.white
+        render :index
+    end
+
+    def sparkling 
+        @wines = Wine.sparkling
+        render :index
+    end
+
+
     private 
 
     def wine_params
