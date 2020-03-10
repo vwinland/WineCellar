@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :reviews, only: :create
+  get '/wines/red', to: 'wines#red' 
+  get '/wines/white', to: 'wines#white'
+  get '/wines/sparkling', to: 'wines#sparkling'
 
 end
