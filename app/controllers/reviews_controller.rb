@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
     
     def index
         get_wine
+        redirect_to wines_path if !@wine
     end
 
     def new 
