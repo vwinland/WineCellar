@@ -2,12 +2,12 @@ class ReviewsController < ApplicationController
     
     def index
         get_wine
-        redirect_to wines_path if !@wine
+        wine_exists
     end
 
     def new 
         get_wine
-        redirect_to wines_path if !@wine
+        wine_exists
         @review = Review.new
     end
 
@@ -25,6 +25,10 @@ class ReviewsController < ApplicationController
 
     def get_wine
         @wine ||= Wine.find_by(id: params[:wine_id])
+    end
+
+    def wine_exists
+        redirect_to wines_path if !@wine
     end
 
     def review_params
