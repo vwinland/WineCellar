@@ -1,15 +1,17 @@
 <h2> Add a Wine </h2>
 
+<%= render partial: '/errors', locals: { record: @wine } %>
+
 <%= form_for @wine do |f| %>
-    <li><%= f.label :name %>
-    <%= f.text_field :name %></li>
-    <li><%= f.label :year %>
-    <%= f.text_field :year %></li>
-    <li><%= f.label :grape_variety %>
-    <%= f.text_field :grape_variety %></li>
-    <li><%= f.label :country_of_origin %>
-    <%= f.text_field :country_of_origin %></li>
-    
+    <%= f.label :name %>
+    <div><%= f.text_field :name %></div>
+    <p><%= f.label :year %></p>
+    <div><%= f.text_field :year %></div>
+    <p><%= f.label :grape_variety %></p>
+    <div><%= f.text_field :grape_variety %></div>
+    <p><%= f.label :country_of_origin %></p>
+    <div><%= f.text_field :country_of_origin %></div>
+
     <%= f.submit "Add Wine" %>
 <% end %>
 

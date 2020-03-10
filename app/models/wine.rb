@@ -1,6 +1,7 @@
 class Wine < ApplicationRecord
     has_many :reviews
     #has_many :users, through: :reviews
+    validates_presence_of :name
 
     def self.red
         where(grape_variety: 'Red')
