@@ -6,12 +6,12 @@ class UsersController < ApplicationController
     end
 # Post /users - create the user action
     def create
-        raise "Hello".inspect
+        @user = User.new(user_params)
     end
 
     private 
 
-    def user_registration_params
+    def user_params
         params.require(:user).permit(:name, :password)
     end
 end
