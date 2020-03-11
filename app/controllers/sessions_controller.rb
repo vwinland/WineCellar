@@ -5,12 +5,13 @@ class SessionsController < ApplicationController
     end
 
     def create 
-        @user = User.find_by(name: params[:user][:name])
-        if @user && @user.authenticate(params[:user][:password])
+        @user = User.find_by(name: params[:name])
+        if @user && @user.authenticate(params[:password])
             sessions[:user_id] = @user_id
-            redirect_to '/'
+            redirect_to wines_path
         else
-            redirect_to '/login'
+            @error = "Username or Password is incorrect"
+            render :new
         end
     end
 
