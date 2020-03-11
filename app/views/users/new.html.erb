@@ -1,6 +1,6 @@
 <h1> Register to Rate and Review Wine </h1>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, url: signup_path do |f| %>
     <%= f.label :name %>
     <div><%= f.text_field :name %><div><br />
     <%= f.label :password %>
