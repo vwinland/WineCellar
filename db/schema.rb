@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_015042) do
+ActiveRecord::Schema.define(version: 2020_03_11_014421) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_015042) do
     t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
 end
