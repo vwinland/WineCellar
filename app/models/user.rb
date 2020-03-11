@@ -1,5 +1,5 @@
-class Review < ApplicationRecord
+class User < ApplicationRecord
     has_secure_password
     has_many :reviews
-    has_many_wines through: :reviews
+    has_many :wines, through: :reviews
 end
