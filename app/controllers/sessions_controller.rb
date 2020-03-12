@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-
+        sessions.clear
+        redirect_to wines_path
     end
 end
