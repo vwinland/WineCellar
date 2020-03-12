@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
             @error = "Username or password incorrect. Please try again."
             render :new
         else
-            session[:user_id] = @user_id
+            log_in(@user)
             redirect_to wines_path
         end
     end
 
     def destroy
-        sessions.clear
+        session.clear
         redirect_to wines_path
     end
 end
