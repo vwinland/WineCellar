@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
       end
 
       def log_in(user)
-        session[:user_id] = user_id
+        session[:user] = user
       end
 end

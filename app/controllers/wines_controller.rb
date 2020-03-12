@@ -1,7 +1,7 @@
 class WinesController < ApplicationController
       
     def index 
-        @wines = current_user.wines
+        @wines = Wine.all
     end
 
     def new 
