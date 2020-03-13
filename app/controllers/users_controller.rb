@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    
+
 # GET /register - new user action
     def new
       @user = User.new
@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     end
 
 
+    def show 
+        @wines = current_user.wines.build
+        render :show
+    end
     private 
 
     def user_params

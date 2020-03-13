@@ -1,14 +1,14 @@
 class ReviewsController < ApplicationController
     before_action :require_login
-    
+    before_action :get_wine, only: [ :index, :new]
     def index
-        get_wine
+        #get_wine
         wine_exists
         current_user
     end
 
     def new 
-        get_wine
+        #get_wine
         wine_exists
         @review = Review.new
     end
