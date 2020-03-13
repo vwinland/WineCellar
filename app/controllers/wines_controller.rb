@@ -1,5 +1,5 @@
 class WinesController < ApplicationController
-      
+    before_action :logged_in?
     def index 
         @wines = Wine.all
     end
@@ -7,7 +7,7 @@ class WinesController < ApplicationController
     def new 
         # @wine = Wine.find(params[:id])
         # @review = Review.new
-         @wine = Wine.new
+        @wine = Wine.new
     end 
 
     def create

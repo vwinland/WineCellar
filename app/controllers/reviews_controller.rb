@@ -1,8 +1,10 @@
 class ReviewsController < ApplicationController
-    #before_action :require_login
+    before_action :logged_in?
     def index
         get_wine
         wine_exists
+        current_user
+        #@reviews = user.reviews
     end
 
     def new 
@@ -13,7 +15,7 @@ class ReviewsController < ApplicationController
 
     def create 
        @wine = Wine.find_by(id: params[:review][:wine_id])
-       @review = Review.new(review_params)
+       @review = current_user.reviews.build(review_params)
         if @review.save 
             redirect_to wine_reviews_path(@review.wine)
         else
