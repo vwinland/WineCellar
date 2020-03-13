@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
 
     def create
         if request.env['omniauth.auth']
-            @user = User.find_or_create_by(name: request.env['omniauth.auth']['info']['nickname'], github_uid: request.env['omniauth.auth']['uid'], password_digest: 'github')
+            @user = User.find_by(github_uid: request.env['omniauth.auth']['uid'])
+            if @user.nil?
+                @user = User.create(name: request.env['omniauth.auth']['info']['nickname'], github_uid: request.env['omniauth.auth']['uid'], password: 'github')
+            end
             log_in(@user)
             redirect_to wines_path
         else
