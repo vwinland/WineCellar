@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 
-  get 'winecellar', to: 'users#show'
+  get '/auth/:provider/callback', to: 'sessions#create'
 end
