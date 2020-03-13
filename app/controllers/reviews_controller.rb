@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
         get_wine
         wine_exists
         current_user
-        #@reviews = user.reviews
     end
 
     def new 
