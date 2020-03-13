@@ -1,0 +1,17 @@
+<div class="header">
+    <div class="title">Wines</div>
+    <% if current_user %>
+        <div class="name">
+            <i>Welcome, <%= current_user.name %></i>
+        </div>
+    <% end %> 
+    <div class="nav">
+    <div><a href='/wines'>Wines</a></div>
+    <% if logged_in? %>
+        <div><a href='/logout'>Log Out</a></div>
+    <% else %> 
+        <div><a href='/signup'>Sign Up</a></div>
+        <div><a href='/login'>Log In</a></div>
+    <% end %>
+    </div>
+</div>

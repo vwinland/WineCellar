@@ -17,3 +17,61 @@
 .field_with_errors {
   border-left: 2px solid red;
 }
+a {
+  color: #722f37;
+  text-decloration: none;
+}
+
+h2 {
+  color: #722f37;
+}
+
+p {
+  color: #722f37;
+}
+
+.wrapper {
+  margin-top: 100px;
+}
+
+.header {
+  margin-top: -100px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  opacity: 0.95;
+  box-shadow: 5px 2px #eebbbb;
+  z-index: 10;
+}
+.header .title {
+  font-size: 24px;
+  height: 50px;
+  color: #722f37;
+  background-color: whitesmoke;
+  margin: 5px;
+  padding: 5px;
+}
+.header .name {
+  margin: auto 5px auto auto;
+  flex: 1, 2;
+}
+.header .nav div {
+  padding: 10px;
+  background-color: white;
+  maring: 10px;
+  border-radius: 5px;
+}
+.header .nav div a {
+  color: #722f37;
+  text-decoration: none;
+}
+.header .nav div:hover {
+  cursor: pointer;
+  background-color: #722f37;
+  transition: 0.05s ease;
+}
+.header .nav div:hover a {
+  color: white;
+}
