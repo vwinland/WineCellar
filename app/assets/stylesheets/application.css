@@ -19,7 +19,7 @@
 }
 a {
   color: #722f37;
-  text-decloration: none;
+  text-decoration: none;
 }
 
 h2 {
@@ -58,9 +58,9 @@ p {
   flex: 1, 2;
 }
 .header .nav div {
-  padding: 10px;
+  padding: 2px;
   background-color: white;
-  maring: 10px;
+  margin: 5px;
   border-radius: 5px;
 }
 .header .nav div a {
