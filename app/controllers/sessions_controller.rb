@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
             log_in(@user)
             redirect_to wines_path
         else
-        @user = User.find_by(name: params[:name])
+            @user = User.find_by(name: params[:name])
             if !@user 
                 @error = 'Account not found.'
                 render :new 
@@ -23,8 +23,8 @@ class SessionsController < ApplicationController
                 log_in(@user)
                 redirect_to wines_path
             end
-        end
-    end
+         end
+     end
 
     def destroy
         session.clear

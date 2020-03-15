@@ -1,6 +1,6 @@
 <h2> Reviews of <i><%= @wine.name %></i></h2>
 
-<%= link_to "Add New Review", new_wine_review_path(@wine) %> 
+<b><%= link_to "Add New Review", new_wine_review_path(@wine) %> </b>
 <% @wine.reviews.each do |review| %>
     
     <p><%= review.review %></p>
