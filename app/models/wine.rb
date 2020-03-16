@@ -8,7 +8,6 @@ class Wine < ApplicationRecord
     scope :sparkling, -> { where(grape_variety: 'Sparkling')} 
   
     def self.search(search)
-        where("name LIKE ?", "%#{search}%") 
-        where("name LIKE ?", "%#{search}%")
+        where("name LIKE ?", "%#{search.strip}%") 
     end
 end
