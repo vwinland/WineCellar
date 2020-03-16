@@ -1,0 +1,6 @@
+<h2> Your Wine Cellar </h2>
+
+<p><% current_user.reviews.each do |review| %></p>
+        <p><%= review.wine.name  %></p>
+            <%= review.review %>
+    <%end%>
