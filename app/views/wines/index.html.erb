@@ -6,7 +6,7 @@
 <u><%= link_to "See All Wines", wines_path %></u>
 
 <%= form_tag(wines_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Wines" %>
     <%= submit_tag "Search", :name => nil%>
 <% end %>
 
