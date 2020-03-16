@@ -2,6 +2,12 @@ class WinesController < ApplicationController
     before_action :logged_in?
     def index 
         @wines = Wine.all
+        if params[:search]
+            @wines = Wine.search(params[:search]).order("created_at DESC")
+          else
+            @wines = Wine.all.order('created_at DESC')
+          end
+        end
     end
 
     def new 
@@ -42,5 +48,5 @@ class WinesController < ApplicationController
     def wine_params
         params.require(:wine).permit(:name, :grape_variety, :country_of_origin, :year)
     end 
-end
+
 

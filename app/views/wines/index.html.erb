@@ -5,12 +5,18 @@
 <u><%= link_to "Filter by Sparkling Wines", wines_sparkling_path %></u>
 <u><%= link_to "See All Wines", wines_path %></u>
 
+<%= form_tag(wines_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+    <%= submit_tag "Search", :name => nil%>
+<% end %>
+
+
 <% @wines.each do |wine| %>
     <h3><%= link_to wine.name, wine_reviews_path(wine)%></h3>
    
     <p>Year: <%= wine.year %></p>
     <p>Grape Variety: <%= wine.grape_variety %></p>
     <p>Country of Origin: <%= wine.country_of_origin %></p>
-   
 
 <% end %>
+
