@@ -9,5 +9,6 @@ class Wine < ApplicationRecord
   
     def self.search(search)
         where("name LIKE ?", "%#{search.strip}%") 
+        #SQL operator that finds any values that are similar to search input
     end
 end

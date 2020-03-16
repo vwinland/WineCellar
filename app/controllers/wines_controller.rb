@@ -2,10 +2,11 @@ class WinesController < ApplicationController
     before_action :logged_in?
     def index 
         @wines = Wine.all
+        #params[:search] is taken in as the argument implemented through the wines index page
         if params[:search]
-            @wines = Wine.search(params[:search]).order("created_at DESC")
+            @wines = Wine.search(params[:search]).order("year DESC")
           else
-            @wines = Wine.all.order('created_at DESC')
+            @wines = Wine.all.order('year DESC')
           end
         end
     end
