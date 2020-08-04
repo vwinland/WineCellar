@@ -1,7 +1,7 @@
 # Wine Cellar 
 
 Wine Cellar is a wine database where users can create an account, and rate and review the wines they have tried. Welcome!
-
+![Wine Cellar Demo](WineCellarDemo.gif)
 
 
 ## Features
