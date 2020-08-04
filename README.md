@@ -1,9 +1,28 @@
-# README
+# Wine Cellar 
 
 Wine Cellar is a wine database where users can create an account, and rate and review the wines they have tried. Welcome!
 
 
-To open this application:
+
+## Features
+* User Login/Signup with authenticated password
+* Third-Party authentication options for signup/login usint GitHub
+* Users can add wine reviews and rate wines
+* Users can view all of the wines they have reviews
+
+## Tech Used
+* Ruby [2.6.1]
+* Rails [6.02] - MVC Web Framework
+* Bycrypt [3.1.7] - gem for authentication and authorization
+* Sqlite3 - database
+* Omniauth-github - gem for omniauth with GitHub
+
+
+
+
+
+
+## To Install
 
 1. Clone this repo and run rails server 
 2. In your browser go to 'http://localhost:3000/wines'
